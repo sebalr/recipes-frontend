@@ -1,4 +1,4 @@
-export class Recipe {
+export class RecipeDTO {
 
   id: number;
   title: string;
@@ -6,8 +6,8 @@ export class Recipe {
 
   public constructor() { }
 
-  public static prepareFromJson(json: any): Recipe {
-    const recipe = new Recipe();
+  public static prepareFromJson(json: any): RecipeDTO {
+    const recipe = new RecipeDTO();
 
     recipe.id = json.id ? json.id : 0;
     recipe.title = json.title ? json.title : undefined;

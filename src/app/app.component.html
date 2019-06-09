@@ -4,12 +4,5 @@
   </nav>
 </header>
 <main role="main" class="container">
-  <h1 class="mt-4">
-    {{title}}
-  </h1>
-  <ul class="list-group">
-    <li class="list-group-item" *ngFor='let recipe of recipes | async'>
-      {{recipe.title}}
-    </li>
-  </ul>
+  <router-outlet></router-outlet>
 </main>

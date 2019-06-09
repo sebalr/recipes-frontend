@@ -1,0 +1,11 @@
+<ng-container *ngIf="recipes$ | async as recipes; else loadingTemplate">
+  <ng-container *ngIf="recipes.length > 0; else noDataTemplate">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let recipe of recipes">
+        {{recipe.title}}
+      </li>
+    </ul>
+  </ng-container>
+  <ng-template #noDataTemplate>No data.</ng-template>
+</ng-container>
+<ng-template #loadingTemplate>Loading...</ng-template>
